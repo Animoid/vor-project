@@ -18,7 +18,8 @@ ser = None
 
 def init_servo_control():
     global ser
-    ser = serial.Serial('/dev/ttyACM0',38400);
+    #ser = serial.Serial('/dev/ttyACM0',38400);
+    ser = serial.Serial('/dev/tty.usbmodem1411',38400)  # Mac
     ser.flushInput()
     #ser.reset_input_buffer()  # >= v 3.0
 
