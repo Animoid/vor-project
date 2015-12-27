@@ -70,7 +70,7 @@ try:
     
     while True:
         ret, img = cam.read()
-        img = cv2.resize(img,None,fx=.5, fy=.5)
+        img = cv2.resize(img,(cw,ch))
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(gray, 1.3, 5)
         
